@@ -1,0 +1,33 @@
+<div >
+
+	<section class="col-md-12">
+
+		<div class="panel panel-title">
+
+			<div class="panel-heading">
+	  			<h1>Revistas</h1>
+			</div>
+		</div>
+		<div class="row" style="background-color:#37454d;">
+			<div class="panel-body" >
+				<ng-buscar></ng-buscar>
+			</div>
+		</div>
+		
+	</section>
+	<div class="col-md-2" >
+		<ng-carreras></ng-carreras>
+	</div>
+	<div  class="col-md-10">
+		<div ng-repeat="revista in revistas | filter:{titulo:vm.titulo,nombre : vm.autor } | filtroEjemplar : carrera " class="col-xs-3">
+			<ul class="list-group">
+				<li class="list-group-item">{{revista.titulo}}</li>
+				<li class="list-group-item">{{revista.id}}</li>
+				<li class="list-group-item">{{revista.descripcion}}</li>
+				
+			</ul>
+		</div>
+	</div>
+	
+
+</div>

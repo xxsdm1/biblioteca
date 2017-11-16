@@ -1,0 +1,61 @@
+<div class="sidebar-toggle-box" >
+  <i class="fa fa-bars"></i>
+</div>
+<!--logo start-->
+<a href="#" class="logo">Una<span>mad</span></a>
+<!--logo end-->
+<div class="nav notify-row" id="top_menu" ng-show="userConectado.conectado==true">
+    <!--  notification start -->
+    <ul class="nav top-menu">
+        <!-- settings start -->
+        <li class="dropdown">
+            <a class="dropdown-toggle" href="#">
+                <i class="fa fa-tasks"></i>
+                <span class="badge bg-success">6</span>
+            </a>
+        </li>
+        <!-- inbox dropdown start-->
+        <li id="header_inbox_bar" class="dropdown">
+            <a  class="dropdown-toggle" href="#">
+                <i class="fa fa-envelope-o"></i>
+                <span class="badge bg-important">5</span>
+            </a>
+        </li>
+        <!-- notification dropdown start-->
+        <li id="header_notification_bar" class="dropdown">
+            <a class="dropdown-toggle" href="#">
+                <i class="fa fa-bell-o"></i>
+                <span class="badge bg-warning">7</span>
+            </a>
+        </li>
+        <!-- notification dropdown end -->
+    </ul>
+    <!--  notification end -->
+</div>
+<div class="top-nav " >
+    <!--search & user info start-->
+    <ul class="nav pull-right top-menu">
+
+        <!-- user login dropdown start-->
+    
+
+        <li class="sb-toggle-right">
+            <i class="fa  fa-align-right"></i>
+        </li>
+        <!-- user login dropdown end -->
+    </ul>
+    <div class="btn-group pull-right" ng-show="userConectado.conectado==true">
+  <button type="button" class="btn btn-default">{{userConectado.nombre}}</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <!-- <li><a href="#">Login</a></li> -->
+    <li><a ng-click="me.salir()">logout</a></li>
+
+
+  </ul>
+</div>
+    <!--search & user info end-->
+</div>
